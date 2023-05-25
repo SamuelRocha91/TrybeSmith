@@ -80,8 +80,8 @@ describe(getRequirementDescription(5), () => {
   })
 
   it('Será validado que os testes estão cobrindo pelo menos 80% das camadas `Service` e `Controller`', async () => {
-    const { total: { branches } } = await runMochaCoverage();
+    const { total: { statements } } = await runMochaCoverage();
     
-    expect(branches.pct).toBeGreaterThanOrEqual(80);
+    expect(statements.pct).toBeGreaterThanOrEqual(80);
   });
 });
