@@ -8,6 +8,12 @@ async function saveProducts(req: Request, res: Response): Promise<Response> {
   return res.status(201).json(serviceResponse.data.message);
 }
 
+async function getProducts(eq: Request, res: Response): Promise<Response> {
+  const serviceResponse = await productService.getProducts();
+  return res.status(200).json(serviceResponse.data.message);
+} 
+
 export default {
   saveProducts,
+  getProducts,
 };
