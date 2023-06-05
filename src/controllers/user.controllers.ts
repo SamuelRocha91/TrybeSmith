@@ -18,8 +18,8 @@ const login = async (req: Request, res: Response) => {
   }
 
   const { password: pass, ...userWithoutPassword } = userLogin;
-
   const token = jwt.createToken(userWithoutPassword);
+  console.log(token);
   res.status(200).json({ token });
 };
 
