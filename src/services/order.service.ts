@@ -7,11 +7,17 @@ async function getOrders(): Promise<ServiceReponse<OrderArray[]>> {
   const orderCreated = await orderModel.findAll({
     include: [{ model: productModel, as: 'productIds', attributes: ['id'] }],
   });   
-  console.log(orderCreated);
+
+  const newOrder = orderCreated.map((ord) => ({
+    id: ord.dataValues.id, 
+    productIds: ord.dataValues.productIds?.map((p : { id: number }) => 
+      p.id), 
+    userId: ord.dataValues.userId, 
+  }));
   return {
     status: 'CREATED',
     data: {
-      message: orderCreated },
+      message: newOrder },
   };
 }
 export default { getOrders };
