@@ -20,4 +20,9 @@ async function getOrders(): Promise<ServiceReponse<OrderArray[]>> {
       message: newOrder },
   };
 }
-export default { getOrders };
+
+async function createOrder(userId: number): Promise<boolean> {
+  await orderModel.create({ userId });
+  return true;
+}
+export default { getOrders, createOrder };

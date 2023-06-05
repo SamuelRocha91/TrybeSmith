@@ -10,7 +10,7 @@ const validateUserId = async (req: Request, res: Response, next: NextFunction) =
   }
   if (typeof userId !== 'number') {
     return res.status(422).json(
-      { message: '"userId" is required' },
+      { message: '"userId" must be a number' },
     );
   }
   const user = await userModel.findOne({ where: { id: userId } });

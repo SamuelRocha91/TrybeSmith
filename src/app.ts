@@ -29,6 +29,7 @@ app.post(
   jwt.validateJwt,
   validateUser.validateUserId,
   validateProductById.validateProductId,
+  orderController.create,
 );
 
 export default app;
