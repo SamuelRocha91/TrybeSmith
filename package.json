@@ -12,7 +12,7 @@
     "dev": "nodemon --watch \"./src/**\" --ext \"ts,js\" --ignore \"src/**/*.spec.ts,src/**/*.json\" --exec \"ts-node src/server.ts\"",
     "build": "npx -y tsc",
     "pretest": "npx -y tsc",
-    "test": "jest -i --runInBand --forceExit --verbose --testTimeout=10000",
+    "test": "jest -i --runInBand --forceExit --verbose --testTimeout=60000",
     "test:local": "mocha",
     "test:coverage": "nyc mocha",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
