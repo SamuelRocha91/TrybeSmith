@@ -11,12 +11,12 @@ app.use(express.json());
 app.post('/login', userController.login);
 
 app.post(
-  '/products',
+  '/products', 
   validateProducts.validateName,
   validateProducts.validatePrice,
   productsController.saveProducts,
 );
-
+// reenvio
 app.get('/products', productsController.getProducts);
 
 app.get('/orders', orderController.getOrders);
