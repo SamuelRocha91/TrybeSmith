@@ -3,6 +3,9 @@ import productsController from './controllers/products.controller';
 import orderController from './controllers/order.controller';
 import userController from './controllers/user.controllers';
 import validateProducts from './middlewares/validateProducts';
+import jwt from './middlewares/validateJWT';
+import validateUser from './middlewares/validateUser';
+import validateProductById from './middlewares/validateProductId';
 
 const app = express();
 
@@ -20,5 +23,12 @@ app.post(
 app.get('/products', productsController.getProducts);
 
 app.get('/orders', orderController.getOrders);
+
+app.post(
+  '/orders',
+  jwt.validateJwt,
+  validateUser.validateUserId,
+  validateProductById.validateProductId,
+);
 
 export default app;
