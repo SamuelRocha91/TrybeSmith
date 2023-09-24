@@ -1,10 +1,9 @@
-# :construction: README em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto.
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+<h1>Project Trybe Smith</h1>
+<p>Trata-se de um projeto avaliativo desenvolvido no módulo de BackEnd do curso de Desenvolvimento Web da Trybe. O projeto envolveu o uso de Typescript, Sequelize e JWT. Destacam-se como competências desenvolvidas: </p>
+<ol>
+  <li>Manipulação de testes;</li>
+  <li>Uso da arquitetura MSC;</li>
+  <li>Criação de rotas para criação, leitura e atualização de informações;</li>
+  <li>Autenticação de rotas;</li>
+</ol>
+<p>Este projeto envolveu a criação uma loja de itens medievais utilizando Typescript e Sequelize. O trabalho técnico se concentrou essencialmente no desenvolvimento das camadas de Service e Controllers. </p>
