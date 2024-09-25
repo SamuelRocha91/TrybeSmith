@@ -19,7 +19,7 @@ app.post(
   validateProducts.validatePrice,
   productsController.saveProducts,
 );
-// reenvio
+
 app.get('/products', productsController.getProducts);
 
 app.get('/orders', orderController.getOrders);
